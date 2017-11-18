@@ -28,6 +28,7 @@ import { AlertService,AuthenticationService,Logger,UserService,UtilService } fro
 import { environment } from '../environments/environment';
 
 
+
 // Concatenate Components here for readability
 export const CoreComponents: Array<any> = [NavBarComponent];
 export const PrimeModules: Array<any> = [CalendarModule,EditorModule,GlobalModule];
@@ -52,7 +53,7 @@ export const PrimeModules: Array<any> = [CalendarModule,EditorModule,GlobalModul
     CoreComponents,
     AppRoutingComponents
   ],
-  
+
   providers: [
     AuthGuard,
     AlertService,

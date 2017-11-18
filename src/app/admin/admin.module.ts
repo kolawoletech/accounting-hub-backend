@@ -8,11 +8,12 @@ import { GlobalModule }         from '../global/global.module';
 import { AdminRouting,AdminRouteComponents} from './admin.routing';
 import { UserManagerComponent } from './user-manager/user-manager.component';
 import { LinkAccountComponent } from './link-account/link-account.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
     imports:      [ BrowserModule,CommonModule,FormsModule,AngularFireModule,AdminRouting
         ,GlobalModule ],
-    declarations: [ AdminRouteComponents,UserManagerComponent,LinkAccountComponent ],
+    declarations: [ AdminRouteComponents,UserManagerComponent,LinkAccountComponent,CategoryComponent ],
     exports:      [
         BrowserModule,CommonModule, FormsModule ]
 })

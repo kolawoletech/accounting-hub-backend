@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 		routeInfo: Array<{}>;
-		
+
     constructor() {}
 
     ngOnInit() {
@@ -18,8 +18,12 @@ export class AdminComponent implements OnInit {
 			},{
     		name: 'Manage Jobs'
 				,path: '/admin/jobs'
-			}];
-	
+			},{
+				name: 'Manage Categories'
+				,path: '/admin/categories'
+			},
+		];
+
 		}
-    
+
 }
