@@ -7,11 +7,11 @@ export const environment = {
   production: false
   ,name: 'Development'
   ,firebaseConfig: {
-		apiKey: "AIzaSyAvf_ea4vEzxfVL2NeuUO6ckZvvORjXA_U",
-		authDomain: "sample-project-e4fb2.firebaseapp.com",
-		databaseURL: "https://sample-project-e4fb2.firebaseio.com",
-		storageBucket: "sample-project-e4fb2.appspot.com",
-		messagingSenderId: "147368635993"
+		apiKey: "AIzaSyAKgwMNzJIvYeNJEy99g9sbKint6DyCv_s",
+		authDomain: "accounting-hub.firebaseapp.com",
+		databaseURL: "https://accounting-hub.firebaseio.com",
+		storageBucket: "",
+		messagingSenderId: "981147796796",
 		/*apiKey: "YOUR_DEV_API_KEY",
 		 authDomain: "YOUR_DEV_PROJECT_ID.firebaseapp.com",
 		 databaseURL: "https://YOUR_DEV_PROJECT_ID.firebaseio.com",
