@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../../global/_models/user.model';
+import { CategoryService } from '../../global/_services/category.service';
 
 @Component({
   selector: 'app-category',
