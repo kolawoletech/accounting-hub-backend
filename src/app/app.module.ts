@@ -22,7 +22,7 @@ import { AppComponent }  from './app.component';
 import { NavBarComponent }  from './core/nav-bar/nav-bar.component';
 
 // Global Services
-import { AlertService,AuthenticationService,Logger,UserService,UtilService } from './global/_services/index';
+import { AlertService,AuthenticationService,Logger,UserService,UtilService,CategoryService} from './global/_services/index';
 
 // Environment
 import { environment } from '../environments/environment';
@@ -59,6 +59,7 @@ export const PrimeModules: Array<any> = [CalendarModule,EditorModule,GlobalModul
     AlertService,
     AuthenticationService,
     Logger,
+    CategoryService,
     UserService,
     UtilService
   ],
