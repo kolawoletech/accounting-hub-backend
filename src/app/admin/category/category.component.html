@@ -1,8 +1,32 @@
 <h2>Category Manager</h2>
 
 <div class="container">
-	<div class="row">Lorem
-
+	<div class="row">
+		<div class="col">
+			<table class="table table-sm table-hover">
+				<tbody>
+				<tr class="new-user">
+					<td colspan="3" routerLink="/admin/categories/create" routerLinkActive="table-selected">
+						<a routerLink="/admin/categories/create"><i class="fa fa-plus"></i> Create New Category</a>
+					</td>
+				</tr>
+				<tr class="users" *ngFor="let category of categories">
+					<td routerLink="/admin/categories/{{category.$key}}" routerLinkActive="table-selected" width="50">
+						<img class="user-icon" [src]="category.photoURL" *ngIf="category.photoURL">
+					</td>
+					<td routerLink="/admin/users/{{category.$key}}" routerLinkActive="table-selected">
+						<a routerLink="/admin/categories/edit/{{category.$key}}">{{category.displayName ? category.displayName : category.displayName + ' ' + category.name}}</a>
+					</td>
+					<td width="10%" align="center" routerLink="/admin/categories/edit/{{category.$key}}" routerLinkActive="table-selected">
+						<a routerLink="/admin/categories/edit/{{category.$key}}"><i class="fa fa-pencil" title="Edit"></i></a>
+					</td>
+<!-- 					<td width="10%">
+						<span *ngIf="user.admin">[ADMIN]</span>
+					</td> -->
+				</tr>
+				</tbody>
+			</table>
+		</div>
 		<div class="col">
 			<router-outlet></router-outlet>
 		</div>

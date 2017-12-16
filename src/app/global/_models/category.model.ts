@@ -1,9 +1,7 @@
 export interface Category {
-
-	uid?: String
+	$key?: String
 	name?: String
 	description?: String
 	displayName?: String
 	photoURL?: String
-
 }

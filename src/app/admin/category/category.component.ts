@@ -15,7 +15,7 @@ export class CategoryComponent implements OnInit {
   constructor(private cs:CategoryService) { }
 
   ngOnInit() {
-    this.categories$ = this.cs.categoryList$.subscribe(data => {console.log('binding categories',data);});
+    this.categories$ = this.cs.categoryList$.subscribe(this.bindCategories.bind(this));
   }
 
   bindCategories(data:any) {

@@ -1,3 +1,30 @@
-<p>
-  category-editor works!
-</p>
+<loading-message [waitFor]="category" [message]="'Loading Category Editor'"></loading-message>
+
+<div *ngIf="category">
+	<button class="btn btn-default btn-sm pull-right " *ngIf="showLinkButton()" (click)="toggleLinkOptions()" [class.active]="showLinkOptions">Link Social Media Accounts</button>
+	<h3><span *ngIf="category.$key">Edit</span><span *ngIf="!user.$key">Create</span> User</h3>
+	<link-account *ngIf="showLinkOptions"></link-account>
+	<form (submit)="saveCategory()">
+		<div class="form-group">
+			<label> Name</label>
+			<input type="text" class="form-control" name="firstName" [(ngModel)]="category.name">
+		</div>
+		<div class="form-group">
+			<label>Description</label>
+			<input type="text" class="form-control" name="lastName" [(ngModel)]="category.description">
+		</div>
+		<div class="form-group">
+			<label>Display Name</label>
+			<input type="text" class="form-control" name="email" [(ngModel)]="category.displayName">
+		</div>
+<!-- 		<div class="form-group" *ngIf="currentCategory.admin">
+			<label>Admin</label>
+			<input type="checkbox" class="form-check" name="admin" [(ngModel)]="category.admin">
+		</div> -->
+		<button type="submit" class="btn btn-primary">Save</button>
+		<button type="button" class="btn btn-default" (click)="cancelEdit()">Cancel</button>
+
+	</form>
+</div>
+
+
